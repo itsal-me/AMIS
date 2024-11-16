@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: "Urbanist";
+}
+
+/* h1,
+h2,
+h3,
+h4 {
+    font-family: "Urbanist";
+} */
+
+h1 {
+    @apply text-5xl;
+}
+
+h2 {
+    @apply text-3xl;
+}
+
+h3 {
+    @apply text-xl;
+}
+
+h4 {
+    @apply text-lg;
+}
+
+/* p,
+input {
+    font-family: "Urbanist";
+} */
+
+a {
+    text-decoration: underline;
+    @apply text-emerald-500;
+}
+
+
+.form-field{
+    border: 1px solid transparent;
+    @apply  bg-emerald-900 placeholder-white placeholder-opacity-60 rounded-lg
+}
+.form-field:focus{
+    outline: none;
+    border: 1px solid;
+    @apply border-emerald-300
+}
+
+
+.signup-bg{
+    background-image: url('PLACEHOLDER');
+}
+
