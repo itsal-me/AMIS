@@ -1,7 +1,173 @@
-{% extends "base.html" %} {%block head_title%} AMIS {%endblock%} {%block body%}
+{% extends "base.html" %} 
+
+{% load static %}
+{%block head_title%} AMIS {%endblock%} {%block body%}
+
+
 
 <div>
-    <h1>AMIS</h1>
+    {% include "navbar/navbar.html" %}
+
+
+    <!-- hero section  -->
+
+
+    <div class="flex flex-col items-center">
+        <div id="hero" class="flex flex-col justify-center items-center gap-4 pt-10">
+            <h1 class="font-bold">Welcome to AMIS:</h1>
+            <p class="font-semibold">
+                Your Trusted Source for Real-Time Agricultural Market Data
+            </p>
+
+            <p class="w-2/3 text-center">
+                At AMIS, we provide farmers, traders, and agricultural professionals with accurate, up-to-date market information to help make informed decisions and enhance productivity. Our platform offers real-time price trends, market analysis, and personalized recommendations to support your agricultural ventures.
+            </p>
+
+            <a href="{% url 'login' %}"><button class="mt-6 px-8 py-3 font-bold rounded text-lg text-white bg-emerald-500 hover:scale-90 hover:underline transition-all ease-in-out delay-50">Get Started</button></a>
+
+            <img src="{% static 'img/images/dummydash-removebg.png' %}" alt="" class="w-3/4 z-10">
+        </div>
+
+
+        <div class="w-full bg-emerald-900 h-[400px] mt-[-400px] z-0">
+
+        </div>
+
+
+        <!-- our mission section  -->
+
+
+        <div class="w-full flex flex-col justify-center items-center h-screen bg-gradient-to-b from-emerald-900 from-65% to-white text-white">
+            <div class="flex flex-col items-center gap-4">
+                <h1 class="font-semibold">Our Mission</h1>
+                <p class="w-3/4">
+                    At AMIS, we aim to empower farmers and agricultural professionals with the tools and information they need to thrive in a competitive market. By providing real-time data and actionable insights, we strive to support the growth and success of the agricultural industry.
+                </p>
+            </div>
+
+            <div class="cards">
+                <div class="card">
+                    <div>
+                        <h2 class="font-bold">Real Time</h2>
+                        <p>
+                            <b>Market Data</b>
+                        </p>
+
+                        <p>
+                            Get access to live data on the latest prices
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <h2 class="font-bold">Market Trends</h2>
+                        <p>
+                            <b>and Analytics</b>
+                        </p>
+
+                        <p>
+                            Stay ahead of the curve with historical price trends and expert analysis
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <div>
+                        <h2 class="font-bold">Recommendations</h2>
+                        <p>
+                            <b>Personalized</b>
+                        </p>
+
+                        <p>
+                            provides tailored advice based on market behavior
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <div>
+                        <h2 class="font-bold">Directories</h2>
+                        <p>
+                            <b>Buyer-Seller</b>
+                        </p>
+
+                        <p>
+                            Connect with trusted buyers and sellers in your region
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+
+
+        <!-- why choose us section  -->
+
+        <div id="why" class="container flex items-center gap-10 px-10 py-20">
+            <div class="w-5/12 flex justify-start">
+               <img src="{% static 'img/images/why-4.png' %}" alt="" class="rounded-lg w-full">
+            </div>
+
+            <div class="w-7/12">
+                <h1 class="font-semibold">Why Choose AMIS?</h1>
+                <p class="pt-10">
+                    <ul class="text-justify ticklist">
+                        <li><b>Real-Time Market Prices:</b> Get access to live data on the latest prices for a wide variety of crops and agricultural products across local markets. Make the right pricing decisions and improve your profitability.</li>
+
+                        <li>
+                            <b>Market Trends and Analytics:</b> Stay ahead of the curve with historical price trends and expert analysis that helps you predict future market movements and adjust strategies accordingly.
+                        </li>
+
+                        <li>
+                            <b>Personalized Recommendations:</b> Our platform provides tailored advice based on your crop type, region, and market behavior, helping you choose the most favorable marketing strategies.
+                        </li>
+
+                        <li>
+                            <b>Farmer Directory:</b> Connect with trusted buyers and sellers in your region to expand your business network and explore new opportunities for your crops.
+                        </li>
+                    </ul>
+                </p>
+
+                
+            </div>
+        </div>
+
+
+
+
+        <!-- feature section  -->
+
+        <div id="features" class="container flex flex-row-reverse items-center gap-10 px-10 py-20">
+            <div class="w-5/12 flex justify-start">
+                <img src="{% static 'img/images/feature-2.png' %}" alt="" class="rounded-lg w-full">
+             </div>
+ 
+             <div class="w-7/12">
+                 <h1 class="font-semibold">Features</h1>
+                 <p class="pt-10">
+                     <ul class="text-justify ticklist">
+                         <li><b>Interactive Dashboard:</b>View key data and insights in an easy-to-understand dashboard with graphs, charts, and up-to-date price alerts.</li>
+ 
+                         <li>
+                             <b>Price Alerts:</b> Set custom alerts to receive notifications when prices meet your target range, helping you optimize your sales timing.
+                         </li>
+ 
+                         <li>
+                             <b>Market Insights & Reports:</b> Access in-depth reports on market conditions, regional variations, and potential risks that could affect crop prices.
+                         </li>
+ 
+                         <li>
+                             <b>User-Friendly Interface:</b> Navigate the app effortlessly with a simple, intuitive design that allows you to access all necessary data and features at the click of a button.
+                         </li>
+                     </ul>
+                 </p>
+             </div>
+        </div>
+    </div>
 </div>
 
 {%endblock%}

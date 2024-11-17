@@ -7,13 +7,13 @@ class SignUpForm(forms.ModelForm):
     password = forms.CharField(
         widget=forms.PasswordInput(attrs={
             'class': 'block w-full px-4 py-2 form-field',
-            'placeholder': 'Enter your password'
+            'placeholder': 'password'
         })
     )
     confirm_password = forms.CharField(
         widget=forms.PasswordInput(attrs={
             'class': 'block w-full px-4 py-2 form-field',
-            'placeholder': 'Confirm your password'
+            'placeholder': 'confirm password'
         })
     )
 
@@ -23,11 +23,11 @@ class SignUpForm(forms.ModelForm):
         widgets = {
             'username': forms.TextInput(attrs={
                 'class': 'block w-full px-4 py-2 form-field',
-                'placeholder': 'Username'
+                'placeholder': 'username'
             }),
             'email': forms.EmailInput(attrs={
                 'class': 'block w-full px-4 py-2 form-field',
-                'placeholder': 'Email'
+                'placeholder': 'email'
             }),
         }
 
@@ -44,12 +44,12 @@ class LoginForm(AuthenticationForm):
     username = forms.CharField(
         widget=forms.TextInput(attrs={
             'class': 'block w-full px-4 py-2 form-field',
-            'placeholder': 'Enter your username'
+            'placeholder': 'username'
         })
     )
     password = forms.CharField(
         widget=forms.PasswordInput(attrs={
             'class': 'block w-full px-4 py-2 form-field',
-            'placeholder': 'Enter your password'
+            'placeholder': 'password'
         })
     )

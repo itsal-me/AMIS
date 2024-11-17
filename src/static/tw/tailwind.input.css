@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Urbanist";
 }
@@ -41,10 +45,23 @@ a {
     @apply text-emerald-500;
 }
 
+.ticklist li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+}
+  
+.ticklist li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    /* color: white; */
+    font-size: 18px;
+}
 
 .form-field{
     border: 1px solid transparent;
-    @apply  bg-emerald-900 placeholder-white placeholder-opacity-60 rounded-lg
+    @apply  bg-emerald-900 placeholder-white placeholder-opacity-60 rounded
 }
 .form-field:focus{
     outline: none;
@@ -57,3 +74,24 @@ a {
     background-image: url('PLACEHOLDER');
 }
 
+.nav{
+    justify-content: space-around;
+}
+
+.button-boxshad:hover{
+    box-shadow: 3px 3px rgba(255, 255, 255, 0.8);
+}
+
+
+.cards {
+    @apply flex pt-20 gap-4;
+}
+
+.card{
+    @apply w-[300px] bg-white rounded-lg shadow-lg h-[300px] text-emerald-800 flex flex-col justify-center items-center p-6 transform transition duration-500 hover:scale-105 hover:shadow-lg hover:shadow-emerald-950;
+    overflow: hidden;
+}
+
+.card p{
+    @apply text-black
+}

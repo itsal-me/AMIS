@@ -1,0 +1,12 @@
+{% load static %}
+
+<nav class="flex items-center nav h-[80px]">
+    <div>
+        <img src="{% static 'img/logo/amis-3-crop.png' %}" alt="" class="w-1/12">
+    </div>
+
+    <div class="flex gap-4">
+        <a href="{% url 'login' %}" class="font-semibold no-underline hover:underline text-emerald-600">Login</a>
+        <a href="{% url 'signup' %}" class="font-semibold no-underline hover:underline text-emerald-600">Sign Up</a>
+    </div>
+</nav>
